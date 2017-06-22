@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <strong>File Name:</strong>
+  <%= @image.description %>
+</p>
+<p>
+  <%= image_tag data_image_path(@image), size: '200x200' %>
+  ->
+  <%= image_tag data_analyzed_image_path(@image), size: '200x200' %>
+</p>
+<%= link_to 'Back', images_path %>
