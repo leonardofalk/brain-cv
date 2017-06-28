@@ -6,7 +6,7 @@ class ImagesController < ApplicationController
   end
 
   def data_analyzed
-    send_data @image.data_analyzed, filename: @image.description, disposition: :inline
+    send_data @image.analyzed_data, filename: @image.description, disposition: :inline
   end
 
   # GET /images
@@ -17,8 +17,7 @@ class ImagesController < ApplicationController
 
   # GET /images/1
   # GET /images/1.json
-  def show
-  end
+  def show; end
 
   # GET /images/new
   def new
@@ -26,8 +25,7 @@ class ImagesController < ApplicationController
   end
 
   # GET /images/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /images
   # POST /images.json
@@ -77,13 +75,14 @@ class ImagesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_image
-      @image = Image.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def image_params
-      params.require(:image).permit(:data, :analyzed_data, :description)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_image
+    @image = Image.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def image_params
+    params.require(:image).permit(:data, :analyzed_data, :description)
+  end
 end

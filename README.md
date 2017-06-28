@@ -1,24 +1,19 @@
-# README
+# BrainCV
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+BrainCV é uma aplicação em Rails que utiliza redes neurais para verificar, dada uma imagem de tomografia axial, se uma pessoa tem ou não esclerose.
 
-Things you may want to cover:
+# Depdendências
 
-* Ruby version
+- OpenCV
+- Ruby
+- Rails
 
-* System dependencies
+# Instalação
 
-* Configuration
+A aplicação foi colocada em um container do docker (https://docs.docker.com/engine/installation/), então basta executar o comando:
 
-* Database creation
+```bash
+docker run -d brain-cv -p 3000:3000
+```
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+A aplicação estará rodando em `localhost:3000`.
