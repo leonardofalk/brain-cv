@@ -2,7 +2,7 @@
 
 BrainCV é uma aplicação em Rails que utiliza redes neurais para verificar, dada uma imagem de tomografia axial, se uma pessoa tem ou não esclerose.
 
-# Depdendências
+# Dependências
 
 - OpenCV
 - Ruby
