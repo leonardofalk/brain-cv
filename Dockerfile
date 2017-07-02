@@ -42,13 +42,10 @@ ADD public $PROJECT_PATH/public
 ADD vendor $PROJECT_PATH/vendor
 ADD config $PROJECT_PATH/config
 ADD lib $PROJECT_PATH/lib
-ADD Rakefile config.ru $PROJECT_PATH
+ADD Rakefile config.ru $PROJECT_PATH/
 ADD app/assets $PROJECT_PATH/app/assets
 ADD app $PROJECT_PATH/app
 ADD db $PROJECT_PATH/db
-RUN bundle exec rake assets:precompile --trace
 
-ENV SECRET_KEY_BASE=acc81dcb18bf1549ca722cd67cbdcf3cc8b0599aa85f851bd20bce757f89073af0874df2253eb1af5684322a2fa29e8d67f5958a5c0484e04d79e9e873437e0c8f21fe6a180f4bcdf4fd455e76e249b9776e6413f10408a2250d1312b5fc956f7ac4816bfc808c51a6d09380467707db31ca7c86cd8df0bea430408fe98adf15
-ENV RAILS_SERVE_STATIC_FILES=1
 EXPOSE 3000
 CMD bundle exec rails server -b 0.0.0.0

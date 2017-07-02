@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 <p>
-  <strong>File Name:</strong>
+  <strong>Nome do Arquivo:</strong>
   <%= @image.description %>
 </p>
 <p>
@@ -8,4 +8,4 @@
   ->
   <%= image_tag data_analyzed_image_path(@image), size: '200x200' %>
 </p>
-<%= link_to 'Back', images_path %>
+<%= link_to 'Voltar', images_path %>
