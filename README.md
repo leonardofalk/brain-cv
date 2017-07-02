@@ -13,7 +13,7 @@ BrainCV é uma aplicação em Rails que utiliza redes neurais para verificar, da
 A aplicação foi colocada em um container do docker (https://docs.docker.com/engine/installation/), então basta executar o comando:
 
 ```bash
-docker run -d brain-cv -p 3000:3000
+docker run -d leonardofalk/brain-cv:latest -p 3000:3000
 ```
 
 A aplicação estará rodando em `localhost:3000`.
