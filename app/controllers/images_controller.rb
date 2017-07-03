@@ -18,7 +18,7 @@ class ImagesController < ApplicationController
   # GET /images/1
   # GET /images/1.json
   def show
-    @samples = ImageReaderService.new(@image).analyze.generate_samples 6
+    @samples = ImageReaderService.new(@image).analyze.generate_samples 4
   end
 
   # GET /images/new
